@@ -1,0 +1,16 @@
+<h1>StakeParks#index</h1>
+
+<table>
+    <tr>
+        <td>Name</td>
+        <td>Address</td>
+        
+    </tr>
+<%= @skate_parks.each do |skate_park| %>
+    <tr>
+        <td><%= link_to skate_park['name'], 
+        stake_park_path(skate_park['id'].to_i) %></td>
+        <td><%= skate_park['address'] %></td>
+    </tr>
+<% end %>
+<table>
